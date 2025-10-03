@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rohis SMKN 4 Klaten</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <header id="navbar" class="fixed top-0 w-full z-50 bg-white shadow-md transition-all">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold text-green-700">🌙 Rohis SMKN 4 Klaten</h1>
+      <nav class="space-x-6 hidden md:flex">
+        <a href="#home" class="hover:text-green-600">Home</a>
+        <a href="#kegiatan" class="hover:text-green-600">Kegiatan</a>
+        <a href="#jadwal" class="hover:text-green-600">Jadwal</a>
+        <a href="#galeri" class="hover:text-green-600">Galeri</a>
+        <a href="#artikel" class="hover:text-green-600">Artikel</a>
+        <a href="#kontak" class="hover:text-green-600">Kontak</a>
+      </nav>
+      <button onclick="toggleDarkMode()" class="ml-4 px-3 py-1 bg-green-600 text-white rounded-lg">
+        🌙
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="h-screen flex items-center justify-center bg-gradient-to-r from-green-700 to-green-400 text-white text-center px-4">
+    <div>
+      <h2 class="text-4xl md:text-6xl font-bold">Selamat Datang di Rohis</h2>
+      <p class="mt-4 text-lg md:text-2xl">SMK Negeri 4 Klaten</p>
+      <blockquote class="italic mt-6">“Sebaik-baik kalian adalah yang belajar Al-Qur’an dan mengajarkannya.”</blockquote>
+      <a href="#kegiatan" class="mt-8 inline-block bg-white text-green-700 px-6 py-3 rounded-lg shadow hover:bg-gray-200">Lihat Kegiatan</a>
+    </div>
+  </section>
+
+  <!-- Kegiatan -->
+  <section id="kegiatan" class="py-20 bg-gray-50">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl font-bold text-green-700">Kegiatan Rohis</h3>
+      <div class="grid md:grid-cols-3 gap-8 mt-10">
+        <div class="p-6 bg-white rounded-xl shadow hover:scale-105 transition">
+          <i class="fas fa-book-quran text-green-600 text-4xl mb-4"></i>
+          <h4 class="font-bold">Kajian Rutin</h4>
+          <p>Pengajian rutin setiap pekan dengan ustadz dan pemateri yang inspiratif.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow hover:scale-105 transition">
+          <i class="fas fa-hand-holding-heart text-green-600 text-4xl mb-4"></i>
+          <h4 class="font-bold">Bakti Sosial</h4>
+          <p>Kegiatan sosial berbagi kepada sesama untuk menumbuhkan kepedulian.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow hover:scale-105 transition">
+          <i class="fas fa-mosque text-green-600 text-4xl mb-4"></i>
+          <h4 class="font-bold">Sholat Jamaah</h4>
+          <p>Menghidupkan masjid dengan sholat berjamaah dan dzikir bersama.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Jadwal -->
+  <section id="jadwal" class="py-20 bg-white">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl font-bold text-green-700">Jadwal Kegiatan & Sholat</h3>
+      <div id="jadwalContainer" class="mt-10 p-6 bg-gray-100 rounded-lg shadow text-left max-w-2xl mx-auto">
+        <p><b>Kajian Jumat:</b> Setiap Jumat pukul 15:30 WIB</p>
+        <p><b>Sholat Dhuha:</b> Setiap hari pukul 08:00 WIB</p>
+        <p><b>Sholat Jamaah:</b> Zuhur & Ashar</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeri -->
+  <section id="galeri" class="py-20 bg-gray-50">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl font-bold text-green-700">Galeri Kegiatan</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+        <img src="https://picsum.photos/300?random=1" class="rounded-lg shadow hover:scale-105 transition">
+        <img src="https://picsum.photos/300?random=2" class="rounded-lg shadow hover:scale-105 transition">
+        <img src="https://picsum.photos/300?random=3" class="rounded-lg shadow hover:scale-105 transition">
+        <img src="https://picsum.photos/300?random=4" class="rounded-lg shadow hover:scale-105 transition">
+      </div>
+    </div>
+  </section>
+
+  <!-- Artikel -->
+  <section id="artikel" class="py-20 bg-white">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl font-bold text-green-700">Artikel Islami</h3>
+      <div id="artikelList" class="grid md:grid-cols-3 gap-8 mt-10"></div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="kontak" class="py-20 bg-gray-50">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl font-bold text-green-700">Kontak Kami</h3>
+      <div class="flex justify-center space-x-6 mt-8 text-3xl">
+        <a href="https://instagram.com/rohis.smkn4klaten" target="_blank" class="text-pink-600 hover:text-pink-800"><i class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com/@rohis.smkn4klaten" target="_blank" class="text-black hover:text-gray-700"><i class="fab fa-tiktok"></i></a>
+        <a href="https://facebook.com/rohis.smkn4klaten" target="_blank" class="text-blue-600 hover:text-blue-800"><i class="fab fa-facebook"></i></a>
+        <a href="https://github.com/rohis-smkn4klaten" target="_blank" class="text-gray-800 hover:text-black"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-700 text-white py-6 text-center">
+    <p>© 2025 Rohis SMKN 4 Klaten | Dibuat dengan ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
